@@ -46,7 +46,6 @@ export default function Header() {
     };
   }, []);
 
-  // Fechar dropdown ao clicar fora
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (

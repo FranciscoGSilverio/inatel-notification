@@ -35,7 +35,6 @@ export default function Header() {
       }
     };
 
-    // Escutar evento customizado (mesma aba)
     window.addEventListener("localStorageChange", handleStorageChange as EventListener);
     // Escutar evento storage (outras abas)
     window.addEventListener("storage", handleStorageChange as EventListener);

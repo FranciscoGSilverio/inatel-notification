@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Image from "next/image";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,22 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
-        <header
-          className="w-full"
-          style={{
-            background: "radial-gradient(circle at 20%, #007ce1, #015294, #015eab)",
-          }}
-        >
-          <div className="container mx-auto px-4 py-4">
-            <Image
-              src="/assets/Inatel Branco.png"
-              alt="Inatel Logo"
-              width={120}
-              height={40}
-              priority
-            />
-          </div>
-        </header>
+        <Header />
         {children}
       </body>
     </html>

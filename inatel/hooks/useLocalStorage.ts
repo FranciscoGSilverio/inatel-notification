@@ -34,6 +34,7 @@ export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T)
 export function setLocalStorageItem(key: string, value: string): void {
   if (typeof window !== 'undefined') {
     window.localStorage.setItem(key, value);
+    dispatchLocalStorageChange(key);
   }
 }
 
